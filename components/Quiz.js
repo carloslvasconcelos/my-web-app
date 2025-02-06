@@ -6,7 +6,6 @@ export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [showResult, setShowResult] = useState(false);
-  const [name, setName] = useState('');
 
   // Quiz questions
   const questions = [
@@ -51,17 +50,9 @@ export default function Quiz() {
       count[answer] = (count[answer] || 0) + 1;
     });
 
-    const favoritePlayer = Object.keys(count).reduce((a, b) =>
+    return Object.keys(count).reduce((a, b) =>
       count[a] > count[b] ? a : b
     );
-
-    return favoritePlayer;
-  };
-
-  // Handle form submission (additional user interaction)
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    alert(`Hello, ${name}! Let's start the quiz.`);
   };
 
   return (
@@ -80,20 +71,6 @@ export default function Quiz() {
           </div>
         </div>
       )}
-
-      {/* Additional form for user interaction */}
-      <form onSubmit={handleFormSubmit} className={styles.form}>
-        <label>
-          Enter your name:
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
     </div>
   );
 }
