@@ -13,8 +13,8 @@ export default function Quiz() {
     {
       question: "Which Spanish team do you like the most?",
       options: [
-        { text: "Barcelona F.C", value: "Messi" },
         { text: "Real Madrid", value: "Cristiano" },
+        { text: "Barcelona F.C", value: "Messi" },
       ],
     },
     {
@@ -25,10 +25,10 @@ export default function Quiz() {
       ],
     },
     {
-      question: "Which team do you know?",
+      question: "What is your favorite number?",
       options: [
-        { text: "Barcelona", value: "Messi" },
-        { text: "Real Madrid", value: "Cristiano" },
+        { text: "10", value: "Messi" },
+        { text: "7", value: "Cristiano" },
       ],
     },
   ];

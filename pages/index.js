@@ -6,9 +6,9 @@ export default function Home() {
     <div className={styles.container}>
       <h1>Welcome to the Favorite Player Quiz!</h1>
       <nav className={styles.nav}>
-        <Link href="./quiz.js">Start Quiz</Link>
-        <Link href="./about.js">About</Link>
-        <Link href="./contact.js">Contact</Link>
+        <Link href="./quiz">Start Quiz</Link>
+        <Link href="./about">About</Link>
+        <Link href="./contact">Contact</Link>
       </nav>
     </div>
   );
