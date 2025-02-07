@@ -1,12 +1,10 @@
-/* Quiz.module.css */
-
-/* Contêiner geral para o quiz */
+/* General container styling for the quiz page */
 .quiz {
-    padding: 30px;
-    text-align: center;
+    padding: 30px; /* Add padding around the quiz content */
+    text-align: center; /* Center-align the text inside the container */
   }
   
-  /* Estilos para o contêiner das opções */
+  /* Styling for the container of the quiz options */
   .options {
     display: flex;
     flex-direction: column;
@@ -14,19 +12,21 @@
     align-items: center;
   }
   
-  /* Estilo para os botões das opções */
+  /* Styling for the option buttons */
   .optionButton {
     padding: 10px 20px;
     font-size: 20px;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 5px;
+    background-color: #007BFF; 
+    color: white; 
+    border-radius: 5px; 
     cursor: pointer;
-    transition: background-color 0.1s ease;
-    width: 100%;
-    max-width: 300px; /* Para limitar o tamanho máximo do botão */
+    transition: background-color 0.1s ease; 
+    width: 100%; 
+    max-width: 300px;
   }
   
+  /* Hover effect for the option buttons */
   .optionButton:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; 
   }
+  

@@ -1,16 +1,18 @@
+/* General container styling for the result section */
 .result {
-    max-width: 600px;
-    margin: 0 auto;
     padding: 20px;
     text-align: center;
   }
   
+  /* Styling for the heading inside the result */
   .result h2 {
     font-size: 24px;
     margin-bottom: 20px;
   }
   
+  /* Styling for the paragraph that displays the player's name */
   .result p {
-    font-size: 20px;
+    font-size: 30px;
     color: #0070f3;
   }
+  

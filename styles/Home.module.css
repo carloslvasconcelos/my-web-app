@@ -1,20 +1,24 @@
+/* Container styling for a centered layout with limited width */
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
-  text-align: center;
+  padding: 20px; 
+  text-align: center; 
 }
 
+/* Styling for the navigation section */
 .nav {
   margin-top: 20px;
 }
 
+/* Styling for the navigation links */
 .nav a {
   margin: 0 10px;
   text-decoration: none;
   color: #0070f3;
 }
 
+/* Hover effect for navigation links */
 .nav a:hover {
   text-decoration: underline;
 }
