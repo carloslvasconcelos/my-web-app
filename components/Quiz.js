@@ -3,11 +3,16 @@ import Result from './Result';
 import styles from '../styles/Quiz.module.css';
 
 export default function Quiz() {
+  // State to track the current question index
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  
+  // State to store the user's answers
   const [answers, setAnswers] = useState([]);
+  
+  // State to control whether the result is displayed
   const [showResult, setShowResult] = useState(false);
 
-  // Quiz questions
+  // Quiz questions with options
   const questions = [
     {
       question: "Which Spanish team do you like the most?",
@@ -32,24 +37,29 @@ export default function Quiz() {
     },
   ];
 
-  // Handle user's answer selection
+  // Function to handle the selection of an answer
   const handleAnswer = (value) => {
+    // Add the selected answer to the answers array
     setAnswers([...answers, value]);
 
+    // If there are more questions, move to the next question
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
+      // If all questions have been answered, show the result
       setShowResult(true);
     }
   };
 
-  // Calculate the favorite player based on answers
+  // Function to calculate the user's favorite player based on answers
   const calculateFavoritePlayer = () => {
+    // Count the occurrences of each answer
     const count = {};
     answers.forEach((answer) => {
       count[answer] = (count[answer] || 0) + 1;
     });
 
+    // Return the answer with the highest count (most selected option)
     return Object.keys(count).reduce((a, b) =>
       count[a] > count[b] ? a : b
     );
@@ -58,13 +68,20 @@ export default function Quiz() {
   return (
     <div className={styles.quiz}>
       {showResult ? (
+        // Show the result once the quiz is completed
         <Result player={calculateFavoritePlayer()} />
       ) : (
         <div>
+          {/* Display the current question */}
           <h2>{questions[currentQuestion].question}</h2>
-          <div>
+          <div className={styles.options}>
+            {/* Render options for the current question */}
             {questions[currentQuestion].options.map((option, index) => (
-              <button key={index} onClick={() => handleAnswer(option.value)}>
+              <button
+                key={index}
+                className={styles.optionButton}
+                onClick={() => handleAnswer(option.value)}
+              >
                 {option.text}
               </button>
             ))}

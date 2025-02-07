@@ -1,10 +1,11 @@
-import styles from '../styles/Contact.module.css';
+// pages/index.js
+import Contact from '../components/Contact'; // Importing the Contact component to be displayed on the homepage
 
-export default function Contact() {
+export default function Home() {
   return (
-    <div className={styles.container}>
-      <h1>Contact Us</h1>
-      <p>Reach out to us for more information.</p>
+    <div>
+      {/* Render the Contact component on the homepage */}
+      <Contact />
     </div>
   );
 }
